@@ -1,0 +1,155 @@
+Project Seguradora_periun {
+  database_type: "SQLite"
+  note: "Esquema relacional da base Seguradora Xperiun."
+}
+
+// ==========================================
+// Modelo Dimensional Snowflake - DBML
+// SGBD: SQLite
+// ==========================================
+
+// Dimensões
+Table d_calendario {
+  Note: '''
+  Tabela Calendário.
+
+  2.100 Linhas x 10 Colunas
+
+  Tipo de Tabela: Dimensão.
+  '''
+
+  data TEXT [pk]
+  ano INTEGER
+  mes INTEGER
+  nome_mes TEXT
+  trimestre INTEGER
+  semestre INTEGER
+  dia_semana INTEGER
+  nome_dia_semana TEXT
+  is_fim_semana INTEGER
+  is_feriado INTEGER
+}
+
+Table d_canal {
+  Note: '''
+  Tabela de Canais.
+
+  6 Linhas x 4 Colunas
+
+  Tipo de Tabela: Dimensão.
+  '''
+
+  canal_id INTEGER [pk]
+  nome_canal TEXT
+  tipo TEXT
+  comissao_percentual REAL
+}
+
+Table d_cliente {
+  Note: '''
+  Tabela de Clientes.
+
+  25.000 Linhas x 7 Colunas
+
+  Tipo de Tabela: Dimensão.
+  '''
+
+  cliente_id INTEGER [pk]
+  uf TEXT
+  regiao_id INTEGER
+  faixa_etaria TEXT
+  genero TEXT
+  tipo_cliente TEXT
+  tempo_cliente_meses INTEGER
+}
+
+Table d_meta_mensal {
+  Note: '''
+  Tabela de Metas Mensais.
+
+  69 Linhas x 6 Colunas
+
+  Tipo de Tabela: Dimensão.
+  '''
+
+  meta_id INTEGER [pk]
+  ano INTEGER
+  mes INTEGER
+  meta_novas_apolices INTEGER
+  meta_receita_premios REAL
+  meta_taxa_churn REAL
+}
+
+Table d_produto {
+  Note: '''
+  Tabela de Produtos.
+
+  9 Linhas x 7 Colunas
+
+  Tipo de Tabela: Dimensão.
+  '''
+
+  produto_id INTEGER [pk]
+  nome_produto TEXT
+  ramo TEXT
+  cobertura TEXT
+  premio_medio_mensal REAL
+  franquia_media REAL
+  descricao TEXT
+}
+
+Table d_regiao {
+  Note: '''
+  Tabela de Regiões.
+
+  27 Linhas x 4 Colunas
+
+  Tipo de Tabela: Dimensão.
+  '''
+
+  regiao_id INTEGER [pk]
+  uf TEXT
+  estado TEXT
+  regiao TEXT
+}
+
+// Tabela Fato
+Table f_apolice {
+  Note: '''
+  Tabela de Apólices.
+
+  120.000 Linhas x 16 Colunas
+
+  Tipo de Tabela: Fato.
+  '''
+
+  apolice_id INTEGER [pk]
+  cliente_id INTEGER
+  produto_id INTEGER
+  canal_id INTEGER
+  data_inicio TEXT
+  data_fim_prevista TEXT
+  vigencia_meses INTEGER
+  premio_mensal REAL
+  parcelas_pagas INTEGER
+  receita_total REAL
+  receita_esperada REAL
+  comissao REAL
+  forma_pagamento TEXT
+  status TEXT
+  data_cancelamento TEXT
+  motivo_cancelamento TEXT
+}
+
+// ==========================================
+// Relacionamentos
+// ==========================================
+
+// Estrutura Snowflake: d_regiao -> d_cliente
+Ref: d_regiao.regiao_id < d_cliente.regiao_id
+
+// Estrutura Estrela: Dimensões -> Tabela Fato
+Ref: d_cliente.cliente_id < f_apolice.cliente_id
+Ref: d_produto.produto_id < f_apolice.produto_id
+Ref: d_canal.canal_id < f_apolice.canal_id
+Ref: d_calendario.data < f_apolice.data_inicio

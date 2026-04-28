@@ -1,5 +1,7 @@
-*.csv
-*.db
-*.docx
-*.m4a
-*.mp3
+/Assistencia de AI - Hipoteses/*
+/Dados/*
+/Descricao do Exercicio/*
+/Identidade Visual/*
+/mbadc4/*
+/Previas/*
+*.pbix
