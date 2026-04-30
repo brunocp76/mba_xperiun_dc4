@@ -1,0 +1,25 @@
+Cores extraídas do logo Xperiun
+Cor	Hex	RGB	Uso
+Azul Marinho	#00204F	(0, 32, 79)	Fundo do logo, 95.7% da imagem
+Azul Profundo	#00427F	(0, 66, 127)	Gradiente de transição
+Azul Médio	#0E76B6	(14, 118, 182)	Gradiente intermediário
+Azul Brilhante	#0A9CE5	(10, 156, 229)	Ícone da nuvem — cor principal
+Branco Azulado	#F4FAFD	(244, 250, 253)	Texto do logo
+Paleta completa para o dashboard
+Cores base (do logo):
+
+#00204F → Cabeçalhos, fundo do header, títulos de seção
+#0A9CE5 → Barras, linhas e visuais principais
+Cores semânticas (complementares):
+
+#E74C3C → Churn / Alerta — gap, desvio negativo, churn acima da meta
+#27AE60 → Retenção / Positivo — meta atingida, tendência de melhora
+#F39C12 → Atenção — risco iminente, zona intermediária
+Cores de apoio:
+
+#7F8C8D → Linhas de referência, meta, rótulos secundários
+#B8C5DB → Background de cards, áreas suaves
+#F4FAFD → Background geral do dashboard (branco frio, coerente com o logo)
+Gradiente sequencial (para séries por ano 2020→2025):
+#B8C5DB → #7A9CC6 → #4A7FB8 → #0A9CE5 → #0E76B6 → #00204F
+Mais claro = mais antigo, mais escuro = mais recente.
