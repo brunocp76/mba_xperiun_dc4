@@ -7,7 +7,7 @@ WITH base_filtrada AS (
       , f_apolice.vigencia_meses
       , f_apolice.premio_mensal
       , f_apolice.receita_esperada
-      , f_apolice.comissao
+--       , f_apolice.comissao  // Correlação Linear perfeita, como produto de receita_esperada e comissao_percentual
       , f_apolice.forma_pagamento
 -- TARGET
       , CASE 
@@ -39,7 +39,7 @@ base_enriquecida AS (
       , base_filtrada.premio_mensal
       , base_filtrada.vigencia_meses
       , base_filtrada.receita_esperada
-      , base_filtrada.comissao
+--       , base_filtrada.comissao  // Correlação Linear perfeita, como produto de receita_esperada e comissao_percentual
 -- PRODUTO
       , d_produto.ramo
       , d_produto.cobertura

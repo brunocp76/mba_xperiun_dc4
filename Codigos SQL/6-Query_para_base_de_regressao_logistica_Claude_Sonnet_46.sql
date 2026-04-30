@@ -15,7 +15,7 @@ WITH universo AS (
       , f_apolice.vigencia_meses
       , f_apolice.premio_mensal
       , f_apolice.receita_esperada
-      , f_apolice.comissao
+--       , f_apolice.comissao  // Correlação Linear perfeita, como produto de receita esperada e comissao_percentual
       , f_apolice.forma_pagamento
       -- Variável resposta: churn GERENCIÁVEL
       , CASE
@@ -115,7 +115,7 @@ WITH universo AS (
       , universo.vigencia_meses
       , universo.premio_mensal
       , universo.receita_esperada
-      , universo.comissao
+--       , universo.comissao  // Correlação Linear perfeita, como produto de receita esperada e comissao_percentual
       , universo.forma_pagamento
       -- Sazonalidade: mês e trimestre de início
       , CAST(strftime('%m', universo.data_inicio) AS INTEGER) AS mes_inicio

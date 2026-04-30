@@ -39,7 +39,7 @@ WITH base_com_window AS (
           , f_apolice.canal_id
           , f_apolice.vigencia_meses
           , f_apolice.premio_mensal
-          , f_apolice.comissao
+--           , f_apolice.comissao  // Correlação Linear perfeita, como produto de receita esperada e comissao_percentual
           , f_apolice.forma_pagamento
           , f_apolice.data_inicio
           , f_apolice.status
@@ -186,7 +186,7 @@ WITH base_com_window AS (
           , base_com_window.canal_id
           , base_com_window.vigencia_meses
           , base_com_window.premio_mensal
-          , base_com_window.comissao
+--           , base_com_window.comissao  // Correlação Linear perfeita, como produto de receita esperada e comissao_percentual
           , base_com_window.forma_pagamento
           , base_com_window.data_inicio
           , base_com_window.status
@@ -263,7 +263,7 @@ SELECT base_cross_sell.apolice_id
      , base_cross_sell.cobertura
      , base_cross_sell.vigencia_meses
      , base_cross_sell.premio_mensal
-     , base_cross_sell.comissao
+--      , base_cross_sell.comissao  // Correlação Linear perfeita, como produto de receita esperada e comissao_percentual
      , base_cross_sell.forma_pagamento
      , base_cross_sell.premio_medio_mensal
      , base_cross_sell.franquia_media

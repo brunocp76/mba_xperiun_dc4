@@ -89,7 +89,7 @@ SELECT
 ---------------------------------------------------------------------------
     , f_apolice.vigencia_meses
     , f_apolice.premio_mensal
-    , f_apolice.comissao
+--     , f_apolice.comissao // É uma correlação perfeita, como produto de receita esperada e comissao_percentual
     , f_apolice.receita_esperada
     , f_apolice.forma_pagamento
     , ROUND(

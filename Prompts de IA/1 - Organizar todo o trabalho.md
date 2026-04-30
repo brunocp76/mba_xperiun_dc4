@@ -50,17 +50,17 @@ Eu preciso que você execute nesta ordem:
 
 ## Entradas
 
-As entradas serão fornecidas de acordo com os passos descritos na seção **Requisição**.
+As entradas serão fornecidas de acordo com os passos da seção **Requisição**.
 
-A primeira entrada é o contexto fornecido.
+A entrada 1 é o contexto fornecido.
 
-A entrada seguinte é a sua pesquisa exaustiva na internet.
+A entrada 2 é a sua pesquisa exaustiva na internet.
 
-A próxima entrada é a descrição da tarefa. Eu tenho tanto um texto Markdown com a descrição da tarefa quanto a transcrição em texto de um datacast.
+A entrada 3 é a descrição da tarefa. Eu tenho tanto um texto Markdown com a descrição da tarefa quanto a transcrição em texto de um datacast.
 
-A próxima entrada é a estrutura dos dados no banco SQLite e alguns "grandes números" acerca dos dados disponíveis para análise.
+A entrada 4 é a estrutura dos dados no banco SQLite e alguns "grandes números" acerca dos dados disponíveis para análise.
 
-A próxima entrada são os dados exportados para formato CSV.
+A entrada 5 são os dados exportados para formato CSV.
 
 ## Entradas
 
@@ -69,13 +69,11 @@ A próxima entrada são os dados exportados para formato CSV.
 
 As entregas deverão ser fornecidas sequencialmente de acordo com os passos descritos na seção **Requisição**.
 
-A própria conversa que teremos será um entregável extremamente valioso ao longo desta jornada.
+A conversa que teremos será um entregável valioso ao longo do processo.
 
-Várias listas de hipóteses de negócios deverão ser fornecidas em formato Markdown.
+Várias listas de hipóteses de negócios e um caminho ótimo de análise deverão ser fornecidas em formato Markdown.
 
 Um conhecimento pesquisado na internet deverá ser fornecido em formato PDF.
-
-Um caminho ótimo de análise deverá ser fornecido em formato Markdown.
 
 ## Entregáveis
 
@@ -85,6 +83,10 @@ Um caminho ótimo de análise deverá ser fornecido em formato Markdown.
 Como estes dados foram anonimizados você está *livre* para usá-los para treinamento de futuras versões de si mesma.
 
 Outros limites serão os que eu descrever ao longo do diálogo.
+
+**Importante**: Gosto muito de detalhes e tento ser o mais detalhado para fornecer o máximo de contexto, mas é imperativo que as suas respostas (a não ser nos arquivos de saída exportáveis), sejam o mais claro possíveis e, sendo claro, que economizem tokens, sem perder a clareza.
+Por exemplo, se for a correção de alguma coisa, não precisa colocar novamente a parte que está com erro para depois colocar a parte corrigida. Mas precisa manter a clareza de qualquer jeito.
+Pode me confirmar que este esforço em economizar tokens sem perder a clareza está bastante claro?
 
 ## Limites
 

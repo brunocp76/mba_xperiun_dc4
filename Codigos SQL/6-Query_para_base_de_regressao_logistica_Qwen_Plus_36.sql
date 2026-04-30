@@ -7,7 +7,7 @@ WITH todas_apolices AS (
       , f_apolice.vigencia_meses
       , f_apolice.premio_mensal
       , f_apolice.forma_pagamento
-      , f_apolice.comissao
+--       , f_apolice.comissao  // Correlação linear perfeita como produto de receita_esperada e comissao_percentual
       , f_apolice.receita_esperada
       , f_apolice.status
       , f_apolice.motivo_cancelamento
@@ -45,7 +45,7 @@ com_flags AS (
       , t.vigencia_meses
       , t.premio_mensal
       , t.forma_pagamento
-      , t.comissao
+--       , t.comissao  // Correlação linear perfeita como produto de receita_esperada e comissao_percentual
       , t.receita_esperada
       , t.status
       , t.motivo_cancelamento
@@ -78,7 +78,7 @@ cumulativas AS (
       , c.vigencia_meses
       , c.premio_mensal
       , c.forma_pagamento
-      , c.comissao
+--       , c.comissao  // Correlação linear perfeita como produto de receita_esperada e comissao_percentual
       , c.receita_esperada
       , c.status
       , c.motivo_cancelamento
@@ -115,7 +115,7 @@ base_filtrada AS (
       , t.vigencia_meses
       , t.premio_mensal
       , t.forma_pagamento
-      , t.comissao
+--       , t.comissao  // Correlação linear perfeita como produto de receita_esperada e comissao_percentual
       , t.receita_esperada
       , t.tipo_cliente
       , t.genero
@@ -153,9 +153,6 @@ base_filtrada AS (
             WHEN t.status = 'Cancelada' AND t.motivo_cancelamento NOT IN ('Falecimento do segurado', 'Venda do bem segurado') THEN 1
             ELSE 0
         END AS indicador_churn
-      , CAST(CASE WHEN t.status = 'Cancelada' AND t.motivo_cancelamento NOT IN ('Falecimento do segurado', 'Venda do bem segurado') THEN 1 ELSE 0 END AS TEXT) || '_' ||
-        CASE WHEN c.qtd_ramos_distintos > 1 THEN 'CS' ELSE 'Mono' END || '_' ||
-        CASE WHEN c.qtd_apolices_cliente <= 3 THEN 'P1' WHEN c.qtd_apolices_cliente <= 7 THEN 'P2' ELSE 'P3' END AS chave_estrato
    FROM todas_apolices t
    JOIN cumulativas c ON t.apolice_id = c.apolice_id
   WHERE 1=1
@@ -171,7 +168,7 @@ base_filtrada AS (
       , base_filtrada.vigencia_meses
       , base_filtrada.premio_mensal
       , base_filtrada.forma_pagamento
-      , base_filtrada.comissao
+--       , base_filtrada.comissao  // Correlação linear perfeita como produto de receita_esperada e comissao_percentual
       , base_filtrada.receita_esperada
       , base_filtrada.tipo_cliente
       , base_filtrada.genero
@@ -198,7 +195,6 @@ base_filtrada AS (
       , base_filtrada.mes_inicio
       , base_filtrada.trimestre_inicio
       , base_filtrada.indicador_churn
-      , base_filtrada.chave_estrato
    FROM base_filtrada
   ORDER BY base_filtrada.data_inicio
       , base_filtrada.apolice_id;
