@@ -76,7 +76,7 @@ SELECT
 ---------------------------------------------------------------------------
     , d_produto.ramo
     , d_produto.cobertura
-    , d_produto.premio_medio_mensal
+--     , d_produto.premio_medio_mensal
     , d_produto.franquia_media
 ---------------------------------------------------------------------------
 -- BLOCO 5: Variáveis do canal
@@ -88,9 +88,9 @@ SELECT
 -- BLOCO 6: Variáveis financeiras da apólice
 ---------------------------------------------------------------------------
     , f_apolice.vigencia_meses
-    , f_apolice.premio_mensal
---     , f_apolice.comissao // É uma correlação perfeita, como produto de receita esperada e comissao_percentual
-    , f_apolice.receita_esperada
+--     , f_apolice.premio_mensal
+--     , f_apolice.comissao
+--     , f_apolice.receita_esperada
     , f_apolice.forma_pagamento
     , ROUND(
           f_apolice.premio_mensal
@@ -99,7 +99,7 @@ SELECT
 ---------------------------------------------------------------------------
 -- BLOCO 7: Variáveis temporais / sazonais
 ---------------------------------------------------------------------------
-    , CAST(strftime('%Y', f_apolice.data_inicio) AS INTEGER) AS ano_inicio
+--     , CAST(strftime('%Y', f_apolice.data_inicio) AS INTEGER) AS ano_inicio
     , CAST(strftime('%m', f_apolice.data_inicio) AS INTEGER) AS mes_inicio
     , CASE
           WHEN CAST(strftime('%m', f_apolice.data_inicio) AS INTEGER) <= 3

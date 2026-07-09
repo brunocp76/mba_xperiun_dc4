@@ -21,25 +21,27 @@ Preciso que você:
 
 ### **1**.  Conecte-se ao arquivo aberto no Power BI Desktop. Neste momento, por favor, pergunte-me o caminho e o nome do arquivo, bem como sobre o que trata este *dashboard*. Isso me permitirá fornecer a você o arquivo e seu contexto de negócios específico.
 
-### **2**.  Crie um primeiro documento em Markdown com suas sugestões iniciais para todas as etapas a seguir, sem levar em conta a possibilidade de que a otimização de uma delas possa afetar as outras. Neste documento, não preciso de uma descrição completa do *dashboard*, mas sim das alterações que você está sugerindo. Liste todas as suas sugestões iniciais e o possível impacto de cada uma delas. Utilize todos os recursos do Markdown para documentar tudo isso.
+### **2**.  Resuma sua impressão inicial sobre o arquivo, destacando sua opinião sobre o quanto você vê espaço para melhorias nele. Especialmente no que diz respeito à redução de tamanho e ao desempenho em termos de velocidade.
 
-### **3**.  Analise os tipos de dados das colunas originais e calculadas para melhorar o desempenho e a compactação. Faça sugestões para otimizá-las, especificando se as alterações devem ser feitas no Power BI Desktop ou no Power Query.
+### **3**.  Crie um primeiro documento em Markdown com suas sugestões iniciais para todas as etapas a seguir, sem levar em conta a possibilidade de que a otimização de uma delas possa afetar as outras. Neste documento, não preciso de uma descrição completa do *dashboard*, mas sim das alterações que você está sugerindo. Liste todas as suas sugestões iniciais e o possível impacto de cada uma delas. Utilize todos os recursos do Markdown para documentar tudo isso.
 
-### **4**.  Considere as medidas DAX existentes na tabela de medidas. Talvez existam medidas repetidas ou redundantes. Peço que as analise e verifique se podemos excluir alguma(s) dela(s). Peço que me apresente as que você julgar redundantes e, com o meu consentimento, poderá deletá-las. Não precisamos tê-las em redundância.
+### **4**.  Analise as convenções de nomenclatura do meu modelo e sugira renomeações para garantir a consistência. Como antes, especifique se as alterações devem ser feitas no Power BI Desktop ou no Power Query. Espero que você analise como a renomeação de variáveis poderia potencialmente prejudicar meus visuais. É por isso que, neste caso, você precisa da minha aprovação antes de renomeá-las por conta própria.
 
-### **5**.  Analise as convenções de nomenclatura do meu modelo e sugira renomeações para garantir a consistência. Como antes, especifique se as alterações devem ser feitas no Power BI Desktop ou no Power Query. Espero que você analise como a renomeação de variáveis poderia potencialmente prejudicar meus visuais. É por isso que, neste caso, você precisa da minha aprovação antes de renomeá-las por conta própria.
+### **5**.  Analise os tipos de dados das colunas originais e calculadas para melhorar o desempenho e a compactação. Faça sugestões para otimizá-las, especificando se as alterações devem ser feitas no Power BI Desktop ou no Power Query.
 
-### **6**.  Proponha a criação de pastas e a organização das medidas calculadas dentro delas. Na mesma linha, proponha a criação de pastas e a organização de colunas nas tabelas. Me apresente estas propostas e, de acordo com minha resposta, aplique as mudanças para organizar melhor os dados. 
+### **6**.  Considere as medidas DAX existentes na tabela de medidas. Talvez existam medidas repetidas ou redundantes. Peço que as analise e verifique se podemos excluir alguma(s) dela(s). Peço que me apresente as que você julgar redundantes e, com o meu consentimento, poderá deletá-las. Não precisamos tê-las em redundância.
 
-### **7**.  Sugira descrições claras e em linguagem de negócios para todas as medidas, colunas e tabelas, a fim de explicar claramente sua finalidade. Explique a lógica por trás do código DAX em termos simples e compreensíveis.
+### **7**.  Proponha a criação de pastas e a organização das medidas calculadas dentro delas. Na mesma linha, proponha a criação de pastas e a organização de colunas nas tabelas. Me apresente estas propostas e, de acordo com minha resposta, aplique as mudanças para organizar melhor os dados. 
 
-### **8**.  Analise o *dashboard* cuidadosamente e, em seguida, indique quais outras medidas DAX você poderia sugerir para analisar dados que ainda não criamos. Por exemplo, mas não se limitando a, medidas de *time intelligence* para análises temporais.
+### **8**.  Sugira descrições claras e em linguagem de negócios para todas as medidas, colunas e tabelas, a fim de explicar claramente sua finalidade. Explique a lógica por trás do código DAX em termos simples e compreensíveis.
 
-### **9**.  Alguma outra sugestão para elevar este *dashboard* ao mais alto nível de desempenho e profissionalismo?
+### **9**.  Analise o *dashboard* cuidadosamente e, em seguida, indique quais outras medidas DAX você poderia sugerir para analisar dados que ainda não criamos. Por exemplo, mas não se limitando a, medidas de *time intelligence* para análises temporais.
 
-### **10**.  Gere um segundo documento Markdown descrevendo com grande detalhamento as melhorias realizadas até o momento. Utilize todos os recursos do Markdown para documentar tudo isso.
+### **10**.  Alguma outra sugestão para elevar este *dashboard* ao mais alto nível de desempenho e profissionalismo?
 
-### **11**.  Gere um documento Markdown final, desta vez uma documentação detalhada em nível de consultoria empresarial internacional sobre o *dashboard* agora otimizado. Use toda a gama de recursos do Markdown para documentar tudo isso.
+### **11**.  Gere um segundo documento Markdown descrevendo com grande detalhamento as melhorias realizadas até o momento. Utilize todos os recursos do Markdown para documentar tudo isso.
+
+### **12**.  Gere um documento Markdown final, desta vez uma documentação detalhada em nível de consultoria empresarial internacional sobre o *dashboard* agora otimizado. Use toda a gama de recursos do Markdown para documentar tudo isso.
 
 ## Solicitação
 

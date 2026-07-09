@@ -242,17 +242,19 @@ Foi desenvolvido um modelo de **Regressão Logística** para estimar a probabili
 
 ### 7.3 Fatores de Risco — Resultados do Modelo
 
-| Variável | Odds Ratio | p-valor | Efeito |
-|----------|----------:|--------:|--------|
-| `tempo_cliente_meses` | **0,794** | < 0,001 | ↓ Protege fortemente — clientes mais antigos cancelam menos |
-| `cobertura_Premium` | **0,849** | < 0,001 | ↓ Protege — maior investimento no produto gera mais fidelidade |
-| `tipo_canal_Corretor` | **0,882** | < 0,001 | ↓ Protege — relacionamento humano retém clientes |
-| `vigencia_meses` | **0,958** | < 0,001 | ↓ Protege — contratos mais longos têm menor *churn* |
-| `cobertura_Básica` | **1,108** | < 0,001 | ↑ Risco — menor percepção de valor |
-| `faixa_etaria_18-25` | **1,093** | < 0,001 | ↑ Risco — instabilidade financeira e menor fidelidade |
-| `tipo_canal_Digital` | **1,137** | < 0,001 | ↑ Risco — facilidade de cancelamento no canal digital |
-| `faixa_etaria_36-45` | 0,981 | 0,066 | ↓ Tendência protetora — não significante estatisticamente |
-| `premio_medio_mensal` | 0,998 | 0,896 | Sem efeito relevante — não significante estatisticamente |
+| Variável | Odds Ratio | p-valor | Sig. | Efeito |
+|----------|----------:|--------:|:----:|--------|
+| `tempo_cliente_meses` | **0,794** | < 0,001 | *** | ↓ Protege fortemente — clientes mais antigos cancelam menos |
+| `cobertura_Premium` | **0,849** | < 0,001 | *** | ↓ Protege — maior investimento no produto gera mais fidelidade |
+| `tipo_canal_Corretor` | **0,882** | < 0,001 | *** | ↓ Protege — relacionamento humano retém clientes |
+| `vigencia_meses` | **0,958** | < 0,001 | *** | ↓ Protege — contratos mais longos têm menor *churn* |
+| `faixa_etaria_36-45` | 0,981 | 0,066 | · | ↓ Tendência protetora — não significante |
+| `premio_medio_mensal` | 0,998 | 0,896 | · | Sem efeito relevante — não significante |
+| `faixa_etaria_18-25` | **1,093** | < 0,001 | *** | ↑ Risco — instabilidade financeira e menor fidelidade |
+| `cobertura_Básica` | **1,108** | < 0,001 | *** | ↑ Risco — menor percepção de valor |
+| `tipo_canal_Digital` | **1,137** | < 0,001 | *** | ↑ Risco — facilidade de cancelamento no canal digital |
+
+*Legenda: \*\*\* p < 0,001 &nbsp;|&nbsp; · p ≥ 0,05 (não significante)*
 
 > **Leitura dos Odds Ratios:** OR = 0,794 para `tempo_cliente_meses` significa que, a cada desvio-padrão de aumento no tempo de relacionamento, as *chances* de *churn* são reduzidas em **20,6%**. OR = 1,137 para `tipo_canal_Digital` significa **13,7% a mais de chance de *churn*** comparado ao canal de referência.
 
